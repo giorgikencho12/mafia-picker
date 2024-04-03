@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ge">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mafia Character Role Picker</title>
+</head>
+<body>
+    <h1>მაფიის როლები</h1>
+    <button onclick="ამოირჩიე როლი()">Pick a Random Character</button>
+    
+    <script type="text/javascript">
+        // Define an array of Mafia character roles
+        var mafiaRoles = ["მაფია", "მოქალაქე", "დონი", "მოქალაქე", "მოქალაქე", "დეტექტივი", "ექიმი", "მოქალაქე", "მაფია", "მოქალაქე", "მანიაკი"];
+
+        // Function to pick a random character role
+        function pickRandomCharacter() {
+            // Check if there are any remaining character roles
+            if (mafiaRoles.length > 0) {
+                // Pick a random index
+                var randomIndex = Math.floor(Math.random() * mafiaRoles.length);
+                // Get the randomly chosen character role
+                var chosenRole = mafiaRoles[randomIndex];
+                // Remove the chosen character role from the array
+                mafiaRoles.splice(randomIndex, 1);
+                // Display the chosen character role
+                alert("You picked: " + chosenRole);
+            } else {
+                alert("ყველა როლი არცეულია!");
+            }
+        }
+    </script>
+</body>
+</html>
